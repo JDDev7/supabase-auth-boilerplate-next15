@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Supabase Auth Boilerplate for Next.js
+***
+This is a boilerplate for Next.js with all the login and signup requirements already configured. This is for Authentication only. If you want to use the database, remember to read the docs on the ssr sections of supabase to continue configuring your project as you see fit.
+
+https://supabase.com/docs/guides/auth/server-side/nextjs?queryGroups=router&router=app
 
 ## Getting Started
+***
+Download the boilerplate or clone the repo.
 
-First, run the development server:
+Configure your `.env.local` file with your supabase url and service key. Also add your other provider callback urls as you need. For example, this has a github provider already
+configured that reads the callback URL from the environment file.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+NEXT_PUBLIC_SUPABASE_URL=<your-supabase-url>
+LOCAL_GITHUB_CALLBACK=<your-github-callback-url>
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-anon-key>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Install the dependencies
+***
+Install the dependencies with npm install
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Run the project and configure to your liking
+***
+Run the project with ```npm run dev```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Disclaimer:
+***
+This project has tailwind installed. If you want to uninstall it, follow the normal procedure on that. Remember that you won't be able to use the project
+untill you configure your .env.local file with your urls. If you don't want to use the Github sign in button, you can remove the GithubSignInButton component from the login page and delete the component itself.
 
-## Learn More
+This project has really basic css styling as I'll honestly won't bother with it since this is just for the authentication part and you will delete the styles anyway to suit your needs.
 
-To learn more about Next.js, take a look at the following resources:
+***
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### License
+***
+MIT

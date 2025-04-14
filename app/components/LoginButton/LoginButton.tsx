@@ -1,0 +1,29 @@
+"use client";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { Session } from "@supabase/supabase-js";
+import { createClient } from "@/utils/supabase/client";
+import SignOutButton from "../SignOutButton/SignOutButton";
+
+function LoginButton() {
+  const supabase = createClient();
+  const [session, setSession] = useState<Session | null>(null);
+
+  useEffect(() => {
+    const getSession = async () => {
+      const { data } = await supabase.auth.getSession();
+      setSession(data.session);
+      console.log(data.session);
+    };
+
+    getSession();
+  }, []);
+
+  return (
+    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <Link href="/login">Log in</Link>
+    </button>
+);
+}
+
+export default LoginButton;
