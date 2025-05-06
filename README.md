@@ -2,7 +2,12 @@
 
 This is a boilerplate for Next.js with all the login and signup requirements already configured. This is for Authentication only. If you want to use the database, remember to read the docs on the ssr sections of supabase to continue configuring your project as you see fit.
 
+
 https://supabase.com/docs/guides/auth/server-side/nextjs?queryGroups=router&router=app
+
+## DISCLAIMER
+
+This is for nextjs 15. If you want to use the nextjs 14 version of this project, please refer to: https://github.com/JDDev7/supabase-auth-boilerplate
 
 ## Getting Started
 
